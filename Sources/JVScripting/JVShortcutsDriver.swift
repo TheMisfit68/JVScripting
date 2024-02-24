@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import OSLog
+import JVSwiftCore
+
 public class ShortcutsDriver{
+	let logger = Logger(subsystem: "be.oneclick.scriptdrivers", category: "ShortcutsDriver")
     
     public init(){}
     

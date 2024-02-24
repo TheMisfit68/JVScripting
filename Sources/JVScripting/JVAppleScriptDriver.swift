@@ -7,9 +7,11 @@
 
 import Foundation
 import OSLog
+import JVSwiftCore
 
 public class AppleScriptDriver{
-    
+	let logger = Logger(subsystem: "be.oneclick.scriptdrivers", category: "AppleScriptDriver")
+
     let fileManager = FileManager.default
     let appleScriptsFolder:URL!
     let fileExtensions:[String] = ["", ".scpt", ".applescript"]
@@ -23,7 +25,6 @@ public class AppleScriptDriver{
             do {
                 try fileManager.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
             } catch {
-                let logger = Logger(subsystem: "be.oneclick.scriptdrivers", category: "LifeCycle")
                 logger.error(
                     """
                     Couldn't create 'AppleScripts'-directory:

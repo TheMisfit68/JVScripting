@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import OSLog
 import JVSwiftCore
 
 public class TerminalDriver:Shell{
+	let logger = Logger(subsystem: "be.oneclick.scriptdrivers", category: "TerminalDriver")
 	
 	public init(){}
 	
